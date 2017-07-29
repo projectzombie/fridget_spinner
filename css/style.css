@@ -143,7 +143,9 @@ p {
 .header {
     background: url(../images/home.jpg);
     background-size: cover;
-	background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-y;
+    
 }
 .header .section_overlay {
     background-color: rgba(30, 40, 40, .90);
@@ -187,7 +189,8 @@ p {
 }
 .download-btn {
     margin-top: 90px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    text-align: center;
 }
 .home-btn,
 .home-btn:focus,
@@ -200,7 +203,7 @@ p {
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 19px;
+    font-size: 30px;
     text-transform: uppercase;
     border-radius: 3px;
     -webkit-transition: all 1s;
