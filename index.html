@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-	Bent - Bootstrap Landing Page Template by Dcrazed
-	Site: https://dcrazed.com/bent-app-landing-page-template/
-	Free for personal and commercial use under GNU GPL 3.0 license.
--->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,7 +70,7 @@
                         <div class="logo text-center">
                                 <!-- LOGO -->
                              
-                            <h1 style="color:white"><img width="100" height="100" src="images/logo.png" alt=""><br/>Ultimate Fidger Spinner Online</h1>
+                            <h1 style="color:white"><img width="100" height="100" src="images/logo.png" alt="">Ultimate Fidger Spinner Online</h1>
                         </div>
                     </div>
                 </div>
@@ -89,7 +83,9 @@
                             <h1 style="font-size:18px ">The ultimate online fidgeting and spinning app Just like a real fidget spinner, even better since its on your phone and FREE! <br>
                             <b>Spin, changes colors and is awesome! <br>
                             Endless fun! <br>
-                            Get it now!</b></h1>
+                            Get it now!<br>
+                            <a onclick="changeVideo('xptA12VjRMQ')">Watch Video</a></b>
+                        </h1>
 
                             <div class="download-btn">
                             <!-- BUTTON -->
@@ -108,101 +104,25 @@
         </div>
     </section>
 
-    <!-- END HEADER SECTION -->
+
+    
 
 
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+        
+            <iframe id="iframeYoutube" width="560" height="315"  src="https://www.youtube.com/embed/xptA12VjRMQ" frameborder="0" allowfullscreen></iframe> 
+            
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+        </div>
+    </div>
+    </div>
 
-
- <!-- =========================
-     START ABOUT US SECTION
-============================== -->
-
-
-  
-    <!-- End About Us -->
-
-
-
-
- <!-- =========================
-     START TESTIMONIAL SECTION
-============================== -->
-
-
-
-
-
-    <!-- END TESTIMONIAL SECTION -->
-
-
-
-<!-- =========================
-     START FEATURES
-============================== -->
-
-    <!-- END FEATURES SECTION -->
-
-
-
-<!-- =========================
-     START CALL TO ACTION
-============================== -->
-
-
-    <!-- END CALL TO ACTION -->
-
-
-<!-- =========================
-     Start APPS SCREEN SECTION
-============================== -->
-
-
-    <!-- ENS APPS SCREEN -->
-
-
-
-
-
-<!-- =========================
-     Start FUN FACTS
-============================== -->
-
-
-
-    <!-- END FUN FACTS -->
-
-
-
-
-<!-- =========================
-     START DOWNLOAD NOW 
-============================== -->
-
-    <!-- END DOWNLOAD -->
-
-
-
-<!-- =========================
-     Start Subscription Form 
-============================== -->
-
-
-
-
-
-    <!-- END SUBSCRIPBE FORM -->
-
-
-<!-- =========================
-     FOOTER 
-============================== -->
-
-    <!-- END FOOTER -->
-
-
-<!-- =========================
-     SCRIPTS 
-============================== -->
 
 
     <script src="js/jquery.min.js"></script>
@@ -220,5 +140,19 @@
     <script src="js/script.js"></script>
 
 
+    <script>
+        $(document).ready(function(){
+        $("#myModal").on("hidden.bs.modal",function(){
+            $("#iframeYoutube").attr("src","#");
+        })
+        })
+
+        function changeVideo(vId){
+        var iframe=document.getElementById("iframeYoutube");
+        iframe.src="https://www.youtube.com/embed/"+vId;
+
+        $("#myModal").modal("show");
+        }
+    </script>
 </body>
 </html>
